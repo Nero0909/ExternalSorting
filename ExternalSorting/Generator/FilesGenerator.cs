@@ -24,7 +24,7 @@ namespace ExternalSorting.Generator
         public void Generate(long fileSizeInBytes, string path)
         {
             var stopwatch = Stopwatch.StartNew();
-            _logger.LogInformation("Start generating the test file");
+            _logger.LogInformation($"Start generating the test file with size {fileSizeInBytes.ToMegabytes()} Mb");
 
             var currentSize = 0L;
             using var sw = new StreamWriter(path);

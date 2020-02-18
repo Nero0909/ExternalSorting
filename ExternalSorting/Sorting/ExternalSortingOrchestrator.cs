@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
+using ExternalSorting.Infrastructure;
 using Microsoft.Extensions.Logging;
 
 namespace ExternalSorting.Sorting
@@ -21,7 +22,7 @@ namespace ExternalSorting.Sorting
         public async Task Sort(string path, long chunkSize)
         {
             var sw = Stopwatch.StartNew();
-            _logger.LogInformation("Begin sorting");
+            _logger.LogInformation($"Begin sorting. Chunk size {chunkSize.ToMegabytes()} Mb");
 
             var sortedChunks = await GetSortedChunks(path, chunkSize);
 
