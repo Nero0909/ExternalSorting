@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExternalSorting.Core\ExternalSorting.Core.csproj" />
     <ProjectReference Include="..\ExternalSorting\ExternalSorting.csproj" />
   </ItemGroup>
 
